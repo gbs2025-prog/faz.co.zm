@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Football Association of Zambia - FAZ</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: white;
+      background-image: url('logo.png'); /* Watermarked FAZ logo */
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: 400px;
+      background-attachment: fixed;
+      color: #222;
+      border: 10px solid;
+      border-image: linear-gradient(to right, green, red, black, orange) 1;
+    }
+
+    header {
+      text-align: center;
+      padding: 20px 0;
+      background-color: rgba(255, 255, 255, 0.95);
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .logo {
+      width: 120px;
+      margin-bottom: 10px;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #006400;
+      font-weight: 600;
+      font-size: 16px;
+      padding: 5px 10px;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #ff6600;
+    }
+
+    .hero {
+      padding: 100px 20px;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 2.5em;
+      color: #006400;
+    }
+
+    .hero p {
+      font-size: 1.2em;
+      color: #555;
+    }
+
+    .section {
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .section h2 {
+      color: #006400;
+      font-size: 2em;
+      margin-bottom: 20px;
+    }
+
+    .teams-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      padding: 20px;
+    }
+
+    .team-card {
+      border: 3px solid #006400;
+      border-radius: 10px;
+      overflow: hidden;
+      transition: transform 0.3s ease;
+      background-color: #f9f9f9;
+    }
+
+    .team-card:hover {
+      transform: scale(1.05);
+    }
+
+    .team-card img {
+      width: 100%;
+      height: auto;
+    }
+
+    .team-card h3 {
+      margin: 10px 0;
+      color: #006400;
+    }
+
+    .footer {
+      background-color: #f2f2f2;
+      padding: 20px;
+      text-align: center;
+      font-size: 14px;
+      color: #777;
+    }
+
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 1.8em;
+      }
+
+      .hero p {
+        font-size: 1em;
+      }
+
+      nav ul {
+        flex-direction: column;
+        gap: 10px;
+      }
+    }
+.news-ticker {
+  background-color: #006400;
+  overflow: hidden;
+  white-space: nowrap;
+  border-top: 3px solid #ff6600;
+  border-bottom: 3px solid #ff6600;
+  padding: 10px 0;
+  margin-top: -20px;
+}
+
+.ticker-wrap {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.ticker-move {
+  display: inline-block;
+  white-space: nowrap;
+  animation: ticker 30s linear infinite;
+  font-weight: 600;
+  font-size: 16px;
+  color: #fff;
+}
+
+.ticker-move span {
+  display: inline-block;
+  padding: 0 50px;
+}
+
+@keyframes ticker {
+  0%   { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <img src="faz.png" alt="FAZ Logo" class="logo" />
+    <nav>
+      <ul>
+        <li><a href="#">Men’s Team</a></li>
+        <li><a href="#">Women’s Team</a></li>
+        <li><a href="#">Fixtures</a></li>
+        <li><a href="#">Results</a></li>
+        <li><a href="#">News</a></li>
+        <li><a href="#">Gallery</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+<!-- Hero Section -->
+<section class="hero" style="text-align: center; padding: 40px 20px;">
+  <h1>Welcome to the Official FAZ Website</h1>
+  <p>Home of the Zambia Men’s and Women’s National Football Teams</p>
+
+  <!-- Image Grid Row -->
+  <div style="
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+    width: 100%;
+  ">
+    <div style="flex: 1; min-width: 250px;">
+      <img src="cham.jpg" alt="Team 1" style="
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+        border: 5px solid transparent;
+        border-image: linear-gradient(to right, green, red, black, orange);
+        border-image-slice: 1;
+        background: transparent;
+      " />
+    </div>
+    <div style="flex: 1; min-width: 250px;">
+      <img src="cham1.jpg" alt="Team 2" style="
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+        border: 5px solid transparent;
+        border-image: linear-gradient(to right, green, red, black, orange);
+        border-image-slice: 1;
+        background: transparent;
+      " />
+    </div>
+    <div style="flex: 1; min-width: 250px;">
+      <img src="cham2.jpg" alt="Team 3" style="
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+        border: 5px solid transparent;
+        border-image: linear-gradient(to right, green, red, black, orange);
+        border-image-slice: 1;
+        background: transparent;
+      " />
+    </div>
+  </div>
+</section>
+
+
+<!-- Achievements Section with Images -->
+<section style="padding: 60px 20px; background-color: #ffffff;">
+  <h2 style="text-align: center; color: #006400;">Zambia's Football Achievements</h2>
+
+  <div style="display: flex; flex-wrap: wrap; gap: 40px; margin-top: 40px; justify-content: center; align-items: flex-start;">
+
+    <!-- Women’s Column -->
+    <div style="flex: 1; min-width: 300px;">
+      <h3 style="color: #e91e63;">Women’s Teams</h3>
+
+      <div style="display: flex; align-items: center; margin-bottom: 20px;">
+        <img src="cosafa_u17_women.jpg" alt="COSAFA U17 Women" style="width: 70px; height: 70px; object-fit: cover; border: 4px solid #008751; margin-right: 15px;">
+        <span style="font-size: 18px;">COSAFA U17 Champions – 2020</span>
+      </div>
+
+      <div style="display: flex; align-items: center; margin-bottom: 20px;">
+        <img src="cosafa_u20_women.jpg" alt="COSAFA U20 Women" style="width: 70px; height: 70px; object-fit: cover; border: 4px solid #008751; margin-right: 15px;">
+        <span style="font-size: 18px;">COSAFA U20 Champions – 2022</span>
+      </div>
+
+      <div style="display: flex; align-items: center; margin-bottom: 20px;">
+        <img src="cosafa_u23_women.jpg" alt="COSAFA U23 Women" style="width: 70px; height: 70px; object-fit: cover; border: 4px solid #008751; margin-right: 15px;">
+        <span style="font-size: 18px;">COSAFA U23 Champions – 2023</span>
+      </div>
+
+      <div style="display: flex; align-items: center; margin-bottom: 20px;">
+        <img src="cosafa_senior_women.jpg" alt="COSAFA Senior Women" style="width: 70px; height: 70px; object-fit: cover; border: 4px solid #008751; margin-right: 15px;">
+        <span style="font-size: 18px;">COSAFA Senior Champions – 2 (2022, 2024) </span>
+      </div>
+
+      <div style="display: flex; align-items: center; margin-bottom: 20px;">
+        <img src="world_cup_women.jpg" alt="World Cup 2023" style="width: 70px; height: 70px; object-fit: cover; border: 4px solid #008751; margin-right: 15px;">
+        <span style="font-size: 18px;">World Cup Qualification – 2023</span>
+      </div>
+    </div>
+
+    <!-- Men’s Column -->
+    <div style="flex: 1; min-width: 300px;">
+      <h3 style="color: #006400;">Men’s Teams</h3>
+
+      <div style="display: flex; align-items: center; margin-bottom: 20px;">
+        <img src="afcon2012.jpg" alt="AFCON 2012" style="width: 70px; height: 70px; object-fit: cover; border: 4px solid #008751; margin-right: 15px;">
+        <span style="font-size: 18px;">AFCON Champions – 2012</span>
+      </div>
+
+      <div style="display: flex; align-items: center; margin-bottom: 20px;">
+        <img src="u20_afcon2017.jpg" alt="U20 AFCON 2017" style="width: 70px; height: 70px; object-fit: cover; border: 4px solid #008751; margin-right: 15px;">
+        <span style="font-size: 18px;">U20 AFCON Champions – 2017</span>
+      </div>
+
+      <div style="display: flex; align-items: center; margin-bottom: 20px;">
+        <img src="cosafa_u17_men.jpg" alt="COSAFA U17" style="width: 70px; height: 70px; object-fit: cover; border: 4px solid #008751; margin-right: 15px;">
+        <span style="font-size: 18px;">COSAFA U17 Champions – 4 (2017,2019,2022 & 2024)</span>
+      </div>
+
+      <div style="display: flex; align-items: center; margin-bottom: 20px;">
+        <img src="cosafa_u20_men.jpg" alt="COSAFA U20" style="width: 70px; height: 70px; object-fit: cover; border: 4px solid #008751; margin-right: 15px;">
+        <span style="font-size: 18px;">COSAFA U20 Champions – 2020</span>
+      </div>
+
+      <div style="display: flex; align-items: center; margin-bottom: 20px;">
+        <img src="cosafa_u23_men.jpg" alt="COSAFA U23" style="width: 70px; height: 70px; object-fit: cover; border: 4px solid #008751; margin-right: 15px;">
+        <span style="font-size: 18px;">COSAFA U23 Champions – 2023</span>
+      </div>
+
+      <div style="display: flex; align-items: center; margin-bottom: 20px;">
+        <img src="co.jpg" alt="COSAFA Senior" style="width: 70px; height: 70px; object-fit: cover; border: 4px solid #008751; margin-right: 15px;">
+        <span style="font-size: 18px;">COSAFA Senior Champions – 7 (1997, 1998, 2006, 2013, 2019, 2022, 2023) </span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+
+  <!-- National Teams Section -->
+  <section class="section" id="teams">
+    <h2>Zambia National Teams</h2>
+    <div class="teams-grid">
+      <!-- Replace '#' and image sources as needed -->
+      <a href="#" class="team-card">
+        <img src="zu17.jpg" alt="U17 Men">
+        <h3>Zambia U17 Men</h3>
+      </a>
+      <a href="#" class="team-card">
+        <img src="zu20.webp" alt="U20 Men">
+        <h3>Zambia U20 Men</h3>
+      </a>
+      <a href="#" class="team-card">
+        <img src="zu23.jpeg" alt="U23 Men">
+        <h3>Zambia U23 Men</h3>
+      </a>
+      <a href="#" class="team-card">
+        <img src="zs.webp" alt="Senior Men">
+        <h3>Senior National Men</h3>
+      </a>
+      <a href="#" class="team-card">
+        <img src="cqu17.webp" alt="U17 Women">
+        <h3>Zambia U17 Women</h3>
+      </a>
+      <a href="#" class="team-card">
+        <img src="cqu20.jpg" alt="U20 Women">
+        <h3>Zambia U20 Women</h3>
+      </a>
+      <a href="#" class="team-card">
+        <img src="cqu23.jpg" alt="U23 Women">
+        <h3>Zambia U23 Women</h3>
+      </a>
+      <a href="#" class="team-card">
+        <img src="cq.jpg" alt="Senior Women">
+        <h3>Senior National Women</h3>
+      </a>
+    </div>
+  </section>
+
+ <!-- Fixtures -->
+<section class="section" id="fixtures">
+  <h2>Upcoming Fixtures</h2>
+  <div style="display: flex; flex-wrap: wrap; justify-content: space-around; gap: 20px;">
+    
+    <!-- Men's Fixtures -->
+    <div style="flex: 1; min-width: 300px;">
+      <h3 style="color: #006400;">Men’s Teams</h3>
+      <ul style="list-style: none; padding: 0;">
+        <li style="margin-bottom: 15px;">
+          <strong>U17:</strong>
+          <img src="z.png" alt="Zambia Flag" style="height: 16px; vertical-align: middle;" />
+          Zambia vs
+          <img src="z.png" alt="Zimbabwe Flag" style="height: 16px; vertical-align: middle;" />
+          Zimbabwe<br>
+          <small>Date: June 5, 2025</small>
+        </li>
+        <li style="margin-bottom: 15px;">
+          <strong>U20:</strong>
+          <img src="z.png" alt="Zambia Flag" style="height: 16px; vertical-align: middle;" />
+          Zambia vs
+          <img src="ma.png" alt="Malawi Flag" style="height: 16px; vertical-align: middle;" />
+          Malawi<br>
+          <small>Date: June 10, 2025</small>
+        </li>
+        <li style="margin-bottom: 15px;">
+          <strong>U23:</strong>
+          <img src="z.png" alt="Zambia Flag" style="height: 16px; vertical-align: middle;" />
+          Zambia vs
+          <img src="sa.jfif" alt="South Africa Flag" style="height: 16px; vertical-align: middle;" />
+          South Africa<br>
+          <small>Date: June 14, 2025</small>
+        </li>
+        <li style="margin-bottom: 15px;">
+          <strong>Senior:</strong>
+          <img src="z.png" alt="Zambia Flag" style="height: 16px; vertical-align: middle;" />
+          Zambia vs
+          <img src="nig.png" alt="Nigeria Flag" style="height: 16px; vertical-align: middle;" />
+          Nigeria<br>
+          <small>Date: June 20, 2025</small>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Women's Fixtures -->
+    <div style="flex: 1; min-width: 300px;">
+      <h3 style="color: #800000;">Women’s Teams</h3>
+      <ul style="list-style: none; padding: 0;">
+        <li style="margin-bottom: 15px;">
+          <strong>U17:</strong>
+          <img src="z.png" alt="Zambia Flag" style="height: 16px; vertical-align: middle;" />
+          Zambia vs
+          <img src="tz.png" alt="Tanzania Flag" style="height: 16px; vertical-align: middle;" />
+          Tanzania<br>
+          <small>Date: June 6, 2025</small>
+        </li>
+        <li style="margin-bottom: 15px;">
+          <strong>U20:</strong>
+          <img src="z.png" alt="Zambia Flag" style="height: 16px; vertical-align: middle;" />
+          Zambia vs
+          <img src="ke.png" alt="Kenya Flag" style="height: 16px; vertical-align: middle;" />
+          Kenya<br>
+          <small>Date: June 11, 2025</small>
+        </li>
+        <li style="margin-bottom: 15px;">
+          <strong>U23:</strong>
+          <img src="z.png" alt="Zambia Flag" style="height: 16px; vertical-align: middle;" />
+          Zambia vs
+          <img src="ug.png" alt="Uganda Flag" style="height: 16px; vertical-align: middle;" />
+          Uganda<br>
+          <small>Date: June 15, 2025</small>
+        </li>
+        <li style="margin-bottom: 15px;">
+          <strong>Senior:</strong>
+          <img src="z.png" alt="Zambia Flag" style="height: 16px; vertical-align: middle;" />
+          Zambia vs
+          <img src="ca.png" alt="Cameroon Flag" style="height: 16px; vertical-align: middle;" />
+          Cameroon<br>
+          <small>Date: June 22, 2025</small>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+
+  <!-- Latest Results -->
+<section class="section" id="results">
+  <h2>Latest Results</h2>
+  <div style="display: flex; flex-wrap: wrap; justify-content: space-around; gap: 20px;">
+
+    <!-- Men's Results -->
+    <div style="flex: 1; min-width: 300px;">
+      <h3 style="color: #006400;">Men’s Teams</h3>
+      <ul style="list-style: none; padding: 0;">
+        <li style="margin-bottom: 15px;">
+          <strong>U17:</strong><br>
+          <img src="z.png" alt="Zambia Flag" style="height: 16px; vertical-align: middle;" /> Zambia 2 - 1 
+          <img src="zi.png" alt="Zimbabwe Flag" style="height: 16px; vertical-align: middle;" /> Zimbabwe<br>
+          <small>Date: May 18, 2025</small>
+        </li>
+        <li style="margin-bottom: 15px;">
+          <strong>U20:</strong><br>
+          <img src="z.png" alt="Zambia Flag" style="height: 16px; vertical-align: middle;" /> Zambia 0 - 0 
+          <img src="ma.png" alt="Malawi Flag" style="height: 16px; vertical-align: middle;" /> Malawi<br>
+          <small>Date: May 12, 2025</small>
+        </li>
+        <li style="margin-bottom: 15px;">
+          <strong>U23:</strong><br>
+          <img src="z.png" alt="Zambia Flag" style="height: 16px; vertical-align: middle;" /> Zambia 3 - 2 
+          <img src="sa.jfif" alt="South Africa Flag" style="height: 16px; vertical-align: middle;" /> South Africa<br>
+          <small>Date: May 7, 2025</small>
+        </li>
+        <li style="margin-bottom: 15px;">
+          <strong>Senior:</strong><br>
+          <img src="z.png" alt="Zambia Flag" style="height: 16px; vertical-align: middle;" /> Zambia 1 - 3 
+          <img src="nig.png" alt="Nigeria Flag" style="height: 16px; vertical-align: middle;" /> Nigeria<br>
+          <small>Date: May 2, 2025</small>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Women's Results -->
+    <div style="flex: 1; min-width: 300px;">
+      <h3 style="color: #800000;">Women’s Teams</h3>
+      <ul style="list-style: none; padding: 0;">
+        <li style="margin-bottom: 15px;">
+          <strong>U17:</strong><br>
+          <img src="z.png" alt="Zambia Flag" style="height: 16px; vertical-align: middle;" /> Zambia 4 - 1 
+          <img src="tz.png" alt="Tanzania Flag" style="height: 16px; vertical-align: middle;" /> Tanzania<br>
+          <small>Date: May 17, 2025</small>
+        </li>
+        <li style="margin-bottom: 15px;">
+          <strong>U20:</strong><br>
+          <img src="z.png" alt="Zambia Flag" style="height: 16px; vertical-align: middle;" /> Zambia 2 - 2 
+          <img src="ke.png" alt="Kenya Flag" style="height: 16px; vertical-align: middle;" /> Kenya<br>
+          <small>Date: May 11, 2025</small>
+        </li>
+        <li style="margin-bottom: 15px;">
+          <strong>U23:</strong><br>
+          <img src="z.png" alt="Zambia Flag" style="height: 16px; vertical-align: middle;" /> Zambia 1 - 0 
+          <img src="ug.png" alt="Uganda Flag" style="height: 16px; vertical-align: middle;" /> Uganda<br>
+          <small>Date: May 6, 2025</small>
+        </li>
+        <li style="margin-bottom: 15px;">
+          <strong>Senior:</strong><br>
+          <img src="z.png" alt="Zambia Flag" style="height: 16px; vertical-align: middle;" /> Zambia 0 - 2 
+          <img src="ca.png" alt="Cameroon Flag" style="height: 16px; vertical-align: middle;" /> Cameroon<br>
+          <small>Date: May 1, 2025</small>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+<!-- News Section -->
+<section class="section" id="news" style="padding: 40px 20px; background-color: #f8f8f8;">
+  <h2 style="text-align: center; color: #006400;">FAZ News</h2>
+  <p style="text-align: center;">Latest updates, press releases, and interviews.</p>
+
+  <div style="position: relative; margin-top: 30px;">
+    <!-- Scroll Container -->
+    <div id="news-carousel" style="
+      display: flex;
+      overflow-x: auto;
+      scroll-behavior: smooth;
+      gap: 20px;
+      padding: 10px;
+    ">
+      <!-- News Card 1 -->
+      <div style="flex: 0 0 300px; background: white; border: 4px solid #008751; border-radius: 10px; overflow: hidden;">
+        <img src="news1.jpg" alt="News 1" style="width: 100%; height: 180px; object-fit: cover;">
+        <div style="padding: 10px;">
+          <h4 style="margin: 10px 0;">Zambia U20 Shines in COSAFA</h4>
+          <p style="font-size: 14px;">Zambia U20 secures another victory in the ongoing COSAFA tournament.</p>
+        </div>
+      </div>
+
+      <!-- News Card 2 -->
+      <div style="flex: 0 0 300px; background: white; border: 4px solid #008751; border-radius: 10px; overflow: hidden;">
+        <img src="news2.jpg" alt="News 2" style="width: 100%; height: 180px; object-fit: cover;">
+        <div style="padding: 10px;">
+          <h4 style="margin: 10px 0;">Women’s National Team Gears Up</h4>
+          <p style="font-size: 14px;">Final preparations ahead of the qualifiers next week.</p>
+        </div>
+      </div>
+
+      <!-- News Card 3 -->
+      <div style="flex: 0 0 300px; background: white; border: 4px solid #008751; border-radius: 10px; overflow: hidden;">
+        <img src="news3.jpg" alt="News 3" style="width: 100%; height: 180px; object-fit: cover;">
+        <div style="padding: 10px;">
+          <h4 style="margin: 10px 0;">FAZ President Interview</h4>
+          <p style="font-size: 14px;">Exclusive insights into the development of Zambian football.</p>
+        </div>
+      </div>
+
+ <!-- News Card 2 -->
+      <div style="flex: 0 0 300px; background: white; border: 4px solid #008751; border-radius: 10px; overflow: hidden;">
+        <img src="news2.jpg" alt="News 2" style="width: 100%; height: 180px; object-fit: cover;">
+        <div style="padding: 10px;">
+          <h4 style="margin: 10px 0;">Women’s National Team Gears Up</h4>
+          <p style="font-size: 14px;">Final preparations ahead of the qualifiers next week.</p>
+        </div>
+      </div>
+
+      <!-- News Card 3 -->
+      <div style="flex: 0 0 300px; background: white; border: 4px solid #008751; border-radius: 10px; overflow: hidden;">
+        <img src="news3.jpg" alt="News 3" style="width: 100%; height: 180px; object-fit: cover;">
+        <div style="padding: 10px;">
+          <h4 style="margin: 10px 0;">FAZ President Interview</h4>
+          <p style="font-size: 14px;">Exclusive insights into the development of Zambian football.</p>
+        </div>
+      </div>
+
+      <!-- Add more news cards as needed -->
+    </div>
+
+    <!-- Prev & Next Buttons -->
+    <button onclick="scrollNews(-1)" style="
+      position: absolute;
+      top: 50%;
+      left: -10px;
+      transform: translateY(-50%);
+      background-color: #006400;
+      border: none;
+      color: white;
+      font-size: 24px;
+      padding: 10px;
+      cursor: pointer;
+      border-radius: 50%;
+      z-index: 1;
+    ">&larr;</button>
+
+    <button onclick="scrollNews(1)" style="
+      position: absolute;
+      top: 50%;
+      right: -10px;
+      transform: translateY(-50%);
+      background-color: #006400;
+      border: none;
+      color: white;
+      font-size: 24px;
+      padding: 10px;
+      cursor: pointer;
+      border-radius: 50%;
+      z-index: 1;
+    ">&rarr;</button>
+  </div>
+</section>
+
+<!-- News Ticker -->
+<div class="news-ticker">
+  <div class="ticker-wrap">
+    <div class="ticker-move">
+      <span>📰 Zambia U20 secures a friendly with South Africa next month.</span>
+      <span>⚽ Chipolopolo to face Nigeria in an AFCON 2025 qualifier this June.</span>
+      <span>🏆 Shepolopolo advances to the final round of Olympic qualifiers!</span>
+      <span>📢 FAZ announces youth academy partnerships across Zambia.</span>
+    </div>
+  </div>
+</div>
+
+
+<script>
+  function scrollNews(direction) {
+    const container = document.getElementById('news-carousel');
+    const scrollAmount = 320; // width of card + gap
+    container.scrollBy({
+      left: direction * scrollAmount,
+      behavior: 'smooth'
+    });
+  }
+</script>
+
+
+ <!-- Footer -->
+<div class="footer" style="background-color: #006400; color: white; text-align: center; padding: 20px 10px; font-size: 14px;">
+  &copy; 2025 Football Association of Zambia. All Rights Reserved.<br>
+  Website designed and maintained by <strong>Sande Tech Solutions</strong>.
+</div>
+
+</body>
+</html>
