@@ -1,5 +1,7 @@
-# faz.co.zm
-WELCOME TO THE FOOTBALL ASSOCIATION OF ZAMBIA OFFICIAL SITE
-<a href="FAZHOME.html" alt="Click here to login">
-  <img src="faz.png" alt="Clickable Image" width="300">
-</a>
+<h1>WELCOME TO THE FOOTBALL ASSOCIATION OF ZAMBIA OFFICIAL SITE</h1>
+
+<div style="text-align: center;">
+  <a href="FAZHOME.html" aria-label="Go to FAZ Home page">
+    <img src="faz.png" alt="Football Association of Zambia logo" style="width: 80vw; max-width: 600px; height: auto;">
+  </a>
+</div>
